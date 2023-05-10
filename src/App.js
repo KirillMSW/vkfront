@@ -12,11 +12,12 @@ import AuthNavbar from "./AuthNav";
 import Logout from "./Logout";
 import Secret from "./Secret";
 import Register from "./Register";
+import Sources from "./Sources";
 export const API_URL = "";
 
 function App() {
     const { auth } = useAuth();
-    console.log(auth)
+
   return (
       <Router>
           {auth ? <AuthNavbar /> : <Navbar />}
@@ -25,6 +26,7 @@ function App() {
               <Route path='/login' exact element={<Login />} />
               <Route path='/logout' exact element={<Logout />} />
               <Route path='/register' exact element={<Register />} />
+              <Route path='/sources' exact element={<Sources />} />
               <Route path='/secret' exact element={auth ? <Secret /> : <Navigate replace to="/login" />} />
               {/*<Route path='/secret' exact element={<Login />} />*/}
           </Routes>

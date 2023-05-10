@@ -39,14 +39,11 @@ export default function Login() {
             login,
             password
         });
-        console.log(token.status)
         if (token.status===200){
             setAuth(true);
             navigate("/");
-            console.log("yep");
         } else {
             setErrorMessage('Invalid login or password');
-            console.log("hey")
         }
 
     }

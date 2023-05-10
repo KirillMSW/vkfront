@@ -23,14 +23,13 @@ const AuthProvider = ({ children }) => {
                     credentials: "include",}
                 );
                 if (res.status===401) {
-                    console.log("no")
+
                     setUser(null);
                 } else {
-                    console.log("yes")
                     setUser(res.data);
                 }
                 // (res.status===401)?console.log("no"):console.log("yes");
-                console.log(res.status)
+
                 // const res = await axios.get(
                 //     'http://vkselection.kirillmsw.ru/api/isloged',
                 //     { withCredentials: true },

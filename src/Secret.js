@@ -6,7 +6,6 @@ import {API_URL} from "./App";
 const Secret = () =>{
     const [data, setData] = useState([]);
 
-    // Using useEffect to call the API once mounted and set the data
     useEffect(() => {
         (async () => {
 

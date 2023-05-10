@@ -66,7 +66,6 @@ const Scoreboard = () =>{
 
             const result = await axios.get(API_URL+"/api/scoreboard", {withCredentials: true});
             let total = result.data["TasksInfo"];
-            console.log(total);
             result.data["UsersInfo"].forEach((node)=>{node.Web=node.Web.toString()+"/"+total["Web"].toString();
                 node.Stego=node.Stego.toString()+"/"+total["Stego"].toString();
                 node.Crypto=node.Crypto.toString()+"/"+total["Crypto"].toString()});

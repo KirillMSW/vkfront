@@ -13,6 +13,8 @@ const AuthNavbar= () =>{
                         <NavLink to="/">Scoreboard</NavLink>
                         <NavLink to="/secret">Secret</NavLink>
                         <NavLink to="/logout">Logout</NavLink>
+                        <NavLink to="/sources">Sources</NavLink>
+
                 </NavMenu>
             </Nav>
         </>

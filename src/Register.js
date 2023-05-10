@@ -38,13 +38,11 @@ export default function Register() {
             login,
             password
         });
-        console.log(token.status)
         if (token.status===200){
             setAuth(true);
             navigate("/");
         }else {
             setErrorMessage('User already exists!');
-            console.log("hey")
         }
     }
     return (
